@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-08T12:12:04.954960" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Steps" source="c:\robot_framework\test\login_steps.robot">
+<test id="s1-t1" name="SuccessFul Login" line="14">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-11-08T12:12:05.472488" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-08T12:12:05.472051" elapsed="2.432377"/>
+</kw>
+<kw name="I navigate to the login page" owner="login_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:07.913174" level="INFO">Opening url 'https://saucedemo.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-08T12:12:07.912706" elapsed="1.160023"/>
+</kw>
+<arg>${URL}</arg>
+<status status="PASS" start="2024-11-08T12:12:07.911540" elapsed="1.161499"/>
+</kw>
+<kw name="I input correct credentials" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-08T12:12:09.074335" elapsed="0.035821"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:09.110902" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-08T12:12:09.110494" elapsed="0.226157"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:09.337390" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-08T12:12:09.337000" elapsed="0.089398"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-11-08T12:12:09.073719" elapsed="0.352963"/>
+</kw>
+<kw name="I click on the login button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:09.428041" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-08T12:12:09.427706" elapsed="0.112660"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:09.427254" elapsed="0.113381"/>
+</kw>
+<kw name="I am able view the home page" owner="login_keywords">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:09.556697" level="INFO">${location} = https://www.saucedemo.com/inventory.html</msg>
+<var>${location}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-11-08T12:12:09.542358" elapsed="0.014573"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${location}</arg>
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-08T12:12:09.557215" elapsed="0.000417"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:09.541874" elapsed="0.015963"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:05.470541" elapsed="4.087848"/>
+</test>
+<test id="s1-t2" name="Unsuccessful Login - No credentials" line="22">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-11-08T12:12:09.576955" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-08T12:12:09.576636" elapsed="1.757719"/>
+</kw>
+<kw name="I navigate to the login page" owner="login_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:11.337629" level="INFO">Opening url 'https://saucedemo.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-08T12:12:11.337358" elapsed="0.807165"/>
+</kw>
+<arg>${URL}</arg>
+<status status="PASS" start="2024-11-08T12:12:11.336778" elapsed="0.808058"/>
+</kw>
+<kw name="I input no credentials" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-08T12:12:12.147078" elapsed="0.035932"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:12.146487" elapsed="0.036901"/>
+</kw>
+<kw name="I click on the login button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:12.188107" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-08T12:12:12.187772" elapsed="0.088511"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:12.187230" elapsed="0.089325"/>
+</kw>
+<kw name="I am able to see the expected erro message" owner="login_keywords">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>class=error-message-container</arg>
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2024-11-08T12:12:12.278189" elapsed="0.044475"/>
+</kw>
+<arg>Epic sadface: Username is required</arg>
+<status status="PASS" start="2024-11-08T12:12:12.277573" elapsed="0.045373"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:09.575976" elapsed="2.747882"/>
+</test>
+<test id="s1-t3" name="Unsuccessful Login - No Username" line="28">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-11-08T12:12:12.326176" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-08T12:12:12.325856" elapsed="1.761424"/>
+</kw>
+<kw name="I navigate to the login page" owner="login_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:14.088802" level="INFO">Opening url 'https://saucedemo.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-08T12:12:14.088535" elapsed="0.821516"/>
+</kw>
+<arg>${URL}</arg>
+<status status="PASS" start="2024-11-08T12:12:14.088014" elapsed="0.822302"/>
+</kw>
+<kw name="I input only the password" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-08T12:12:14.923398" elapsed="0.029997"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:14.954160" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-08T12:12:14.953758" elapsed="0.128672"/>
+</kw>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-11-08T12:12:14.922858" elapsed="0.159882"/>
+</kw>
+<kw name="I click on the login button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:15.084103" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-08T12:12:15.083793" elapsed="0.086711"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:15.083342" elapsed="0.087455"/>
+</kw>
+<kw name="I am able to see the expected erro message" owner="login_keywords">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>class=error-message-container</arg>
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2024-11-08T12:12:15.183019" elapsed="0.090906"/>
+</kw>
+<arg>Epic sadface: Username is required</arg>
+<status status="PASS" start="2024-11-08T12:12:15.182045" elapsed="0.092148"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:12.325257" elapsed="2.976431"/>
+</test>
+<test id="s1-t4" name="Unsuccessful Login - No password" line="35">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-11-08T12:12:15.321265" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-08T12:12:15.320958" elapsed="1.805067"/>
+</kw>
+<kw name="I navigate to the login page" owner="login_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:17.127465" level="INFO">Opening url 'https://saucedemo.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-08T12:12:17.127203" elapsed="1.043995"/>
+</kw>
+<arg>${URL}</arg>
+<status status="PASS" start="2024-11-08T12:12:17.126691" elapsed="1.044787"/>
+</kw>
+<kw name="I input only the username" owner="login_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-08T12:12:18.172642" elapsed="0.028813"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:18.202378" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-08T12:12:18.201893" elapsed="0.139745"/>
+</kw>
+<arg>${USERNAME}</arg>
+<status status="PASS" start="2024-11-08T12:12:18.172146" elapsed="0.169763"/>
+</kw>
+<kw name="I click on the login button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:18.343922" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-08T12:12:18.343611" elapsed="0.096813"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:18.343125" elapsed="0.097581"/>
+</kw>
+<kw name="I am able to see the expected erro message" owner="login_keywords">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>class=error-message-container</arg>
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2024-11-08T12:12:18.454506" elapsed="0.046405"/>
+</kw>
+<arg>Epic sadface: Password is required</arg>
+<status status="PASS" start="2024-11-08T12:12:18.453951" elapsed="0.047253"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:15.320358" elapsed="3.187567"/>
+</test>
+<test id="s1-t5" name="Unsuccessful Login - Wrong credentials" line="42">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-11-08T12:12:18.510177" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-08T12:12:18.509825" elapsed="2.250791"/>
+</kw>
+<kw name="I navigate to the login page" owner="login_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:20.788968" level="INFO">Opening url 'https://saucedemo.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-08T12:12:20.788697" elapsed="1.295277"/>
+</kw>
+<arg>${URL}</arg>
+<status status="PASS" start="2024-11-08T12:12:20.788147" elapsed="1.296096"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-08T12:12:22.084785" elapsed="0.042605"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:22.129319" level="INFO">Typing text 'nsnms' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>nsnms</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-08T12:12:22.128532" elapsed="0.144327"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:22.277262" level="INFO">Typing text 'mms,s' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>mms,s</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-08T12:12:22.276784" elapsed="0.107897"/>
+</kw>
+<kw name="I click on the login button" owner="login_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-08T12:12:22.392729" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-08T12:12:22.392360" elapsed="0.093525"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:22.391671" elapsed="0.094630"/>
+</kw>
+<kw name="I am able to see the expected erro message" owner="login_keywords">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>class=error-message-container</arg>
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2024-11-08T12:12:22.487669" elapsed="0.050982"/>
+</kw>
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<status status="PASS" start="2024-11-08T12:12:22.487095" elapsed="0.051828"/>
+</kw>
+<status status="PASS" start="2024-11-08T12:12:18.508835" elapsed="4.032917"/>
+</test>
+<status status="PASS" start="2024-11-08T12:12:04.961620" elapsed="17.588503"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Login Steps">Login Steps</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
