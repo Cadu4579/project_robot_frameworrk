@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../resources/login_keywords.resource
-Test Setup    Open Browser    browser=chrome
+Suite Setup    Open Browser    browser=chrome
 
 *** Variables ***
 ${URL}    https://saucedemo.com/
