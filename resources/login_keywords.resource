@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-
+Variables    ../variables/variables.py
 
 *** Keywords ***
 I navigate to the login page
